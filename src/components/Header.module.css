@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: #3C2A21;
+}
+
+.logo {
+    height: 60px;
+    background-color: #E5E5CB;
+    border: sold 1px black;
+    border-radius: 50%;
+}
+
+.nav a {
+    margin: 0 2rem;
+    color: #E5E5CB;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #E5E5CB;
+    display: none;
+    opacity: 0;
+}
+
+.navCloseBtn {
+    display: none;
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .btn {
+        display: flex;
+        opacity: 1;
+    }
+
+    .nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: #1A120B;
+        transition: 1s;
+
+    }
+    .header .responsive_nav {
+        transform: translateY(100vh);
+    }
+
+    .navCloseBtn{
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+    }
+
+    .nav a {
+        font-size: 1.5rem;
+    }
+
+
+}

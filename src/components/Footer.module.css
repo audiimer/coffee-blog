@@ -1,0 +1,38 @@
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3C2A21;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navItem {
+    margin-right: 10px;
+    color: #E5E5CB;
+    text-decoration: none;
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .copywright {
+    text-align: center;
+    color: #E5E5CB;
+  }
