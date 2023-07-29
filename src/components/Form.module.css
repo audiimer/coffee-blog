@@ -1,0 +1,57 @@
+.container {
+    background-color: #3C2A21;
+    padding: 2rem;
+    border: 1px solid #1A120B;
+    border-radius: 10px;
+}
+
+.formHeader, .formHeader h2 {
+    margin-bottom: 10px;
+}
+
+
+.authFormContainer,
+.loginForm,
+.registerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+label {
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+
+input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none
+}
+
+button {
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.linkBtn {
+    background: none;
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .authFormContainer {
+        padding: 5rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 0.5rem;
+    }
+}

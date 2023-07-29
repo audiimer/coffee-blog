@@ -17,6 +17,7 @@ const Header = () => {
         <a href="">About</a>
         <a href="">Articles</a>
         <a href="">Blog</a>
+        <a className={styles.signup} href="">Sign Up Free</a>
         <button className={styles.navCloseBtn} onClick={showNavBar}><FaTimes /></button>
       </nav>
       <button className={styles.btn} onClick={showNavBar}><FaBars /></button>
