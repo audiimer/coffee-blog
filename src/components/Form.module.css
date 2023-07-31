@@ -5,8 +5,10 @@
     border-radius: 10px;
 }
 
-.formHeader, .formHeader h2 {
+.formHeader,
+.formHeader h2 {
     margin-bottom: 10px;
+    text-align: start;
 }
 
 
@@ -16,7 +18,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 
 label {
@@ -32,16 +33,21 @@ input {
     border: none
 }
 
-button {
+.authButton {
+    margin-top: 10px;
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.linkBtn {
     border: none;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-}
-
-
-.linkBtn {
     background: none;
     color: white;
     text-decoration: underline;

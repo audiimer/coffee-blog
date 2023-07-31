@@ -35,7 +35,7 @@ const Login = (props) => {
             id="password"
             name="password"
           />
-          <button type="submit">Log In</button>
+          <button type="submit" className={styles.authButton}>Log In</button>
         </form>
         <button
           className={styles.linkBtn}

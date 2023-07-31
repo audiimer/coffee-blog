@@ -45,7 +45,7 @@ const Register = (props) => {
             id="password"
             name="password"
           />
-          <button type="submit">Sign Up</button>
+          <button type="submit" className={styles.authButton}>Sign Up</button>
         </form>
         <button
           className={styles.linkBtn}
