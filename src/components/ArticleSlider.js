@@ -43,6 +43,7 @@ const dummy_articles = [
 
 const ArticleSlider = () => {
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
+  const [fadeItems, setFadeItems] = useState(false);
   const itemsPerPage = 3;
   const visibleArticles = dummy_articles.slice(
     currentStartIndex,
@@ -55,6 +56,8 @@ const ArticleSlider = () => {
         ? dummy_articles.length - itemsPerPage
         : currentStartIndex - itemsPerPage;
     setCurrentStartIndex(newStartIndex);
+    setFadeItems(true);
+    setTimeout(() => setFadeItems(false), 50);
   };
 
   const handleNext = () => {
@@ -63,6 +66,8 @@ const ArticleSlider = () => {
         ? 0
         : currentStartIndex + itemsPerPage;
     setCurrentStartIndex(newStartIndex);
+    setFadeItems(true);
+    setTimeout(() => setFadeItems(false), 50);
   };
 
   return (
@@ -75,10 +80,12 @@ const ArticleSlider = () => {
       </button>
 
       <div className={styles["slider-items"]}>
-        {visibleArticles.map((article) => (
+        {visibleArticles.map((article, index) => (
           <div
             key={article.id}
-            className={`${styles["slider-item"]} ${styles["fade-entered"]}`}
+            className={`${styles["slider-item"]} ${
+              fadeItems ? styles["fade-out"] : ""
+            }`}
           >
             <div className={styles["slider-image"]}>
               <img src={article.img} alt={`Article ${article.id}`} />
