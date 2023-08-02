@@ -1,6 +1,6 @@
 .container {
     background-color: #3C2A21;
-    padding: 4rem;
+    padding: 2rem;
     border: 1px solid #1A120B;
     border-radius: 10px;
 }
@@ -17,6 +17,7 @@
 .registerForm {
     display: flex;
     flex-direction: column;
+
 }
 
 
@@ -66,12 +67,22 @@ button:disabled:active {
 .invalid input {
     border: 1px solid #b40e0e;
     background-color: #fddddd;
+
+}
+
+.invalid {
+    height: 67px;
 }
 
 .invalid input:focus {
     border-color: #ff8800;
     background-color: #fbe8d2;
 }
+
+.invalid input:focus+.errorIcon {
+    display: none;
+}
+
 
 .errorText {
     font-size: 14px;
@@ -89,4 +100,11 @@ button:disabled:active {
         border-radius: 10px;
         margin: 0.5rem;
     }
+}
+
+.errorIcon {
+    position: relative;
+    left: 42%;
+    transform: translate(-50%, -200%);
+    color: rgb(160, 22, 22);
 }

@@ -69,12 +69,12 @@ const Login = (props) => {
             type="email"
             onChange={emailChangeHandler}
             onBlur={emailBlurHandler}
-            placeholder="youremail@gmail.com"
+            placeholder={emailInputHasError ? "Invalid E-mail": "youremail@email.com"}
             id="email"
             name="email"
             />
             {emailInputHasError && (
-              <p className={styles.errorText}>Invalid E-mail <FaExclamationCircle/></p>
+               <FaExclamationCircle className={styles.errorIcon} />
             )}
           </div>
           <div className={passwordInputClasses}>
@@ -84,12 +84,12 @@ const Login = (props) => {
             type="password"
             onChange={passwordChangeHandler}
             onBlur={passwordBlurHandler}
-            placeholder="*********"
+            placeholder={passwordInputHasError ? "Invalid Password": "*********"}
             id="password"
             name="password"
           />
            {passwordInputHasError && (
-          <p className={styles.errorText}>Invalid Password <FaExclamationCircle/></p>
+          <FaExclamationCircle className={styles.errorIcon} />
         )}
           </div>
           <button type="submit" className={styles.authButton} disabled={!formIsValid}>
