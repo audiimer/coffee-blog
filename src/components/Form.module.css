@@ -1,6 +1,6 @@
 .container {
     background-color: #3C2A21;
-    padding: 2rem;
+    padding: 4rem;
     border: 1px solid #1A120B;
     border-radius: 10px;
 }
@@ -28,7 +28,7 @@ label {
 
 input {
     margin: 0.5rem 0;
-    padding: 1rem;
+    padding: .5rem 1rem;
     border-radius: 10px;
     border: none
 }
@@ -51,6 +51,35 @@ input {
     background: none;
     color: white;
     text-decoration: underline;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+    background-color: lightslategray;
+    color: rgb(51, 50, 50);
+    border-color: lightslategray;
+    cursor: not-allowed;
+
+}
+
+.invalid input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+}
+
+.invalid input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+}
+
+.errorText {
+    font-size: 14px;
+    color: #b40e0e;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0;
 }
 
 @media screen and (max-width: 600px) {

@@ -6,6 +6,33 @@ const Register = (props) => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
+  // const {
+  //   value: enteredName,
+  //   isValid: enteredNameIsValid,
+  //   hasError: nameInputHasError,
+  //   valueChangeHandler: nameChangeHandler,
+  //   inputBlurHandler: nameBlurHandler,
+  //   reset: resetNameInput,
+  // } = useInput((value) => value.trim() !== "");
+
+  // const {
+  //   value: enteredLastName,
+  //   isValid: enteredLastNameIsValid,
+  //   hasError: lastNameInputHasError,
+  //   valueChangeHandler: lastNameChangeHandler,
+  //   inputBlurHandler: lastNameBlurHandler,
+  //   reset: resetLastNameInput,
+  // } = useInput((value) => value.trim() !== "");
+
+  // const {
+  //   value: enteredEmail,
+  //   isValid: enteredEmailIsValid,
+  //   hasError: emailInputHasError,
+  //   valueChangeHandler: emailChangeHandler,
+  //   inputBlurHandler: emailBlurHandler,
+  //   reset: resetEmailInput,
+  // } = useInput((value) => value.includes("@"));
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
@@ -15,6 +42,7 @@ const Register = (props) => {
     <div className={styles.container}>
       <div className={styles.formHeader}>
         <h2>Sign Up</h2>
+        <p>Don't miss out!</p>
         <hr></hr>
       </div>
       <div className={styles.authFormContainer}>
@@ -32,11 +60,20 @@ const Register = (props) => {
             value={email}
             type="email"
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="youremail@gmail.com"
+            placeholder="youremail@email.com"
             id="email"
             name="email"
           />
           <label htmlFor="password">New Password</label>
+          <input
+            value={password}
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="*********"
+            id="password"
+            name="password"
+          />
+          <label htmlFor="password">Re-enter New Password</label>
           <input
             value={password}
             type="password"

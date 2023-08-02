@@ -44,7 +44,9 @@ const dummy_articles = [
 const ArticleSlider = () => {
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
   const [fadeItems, setFadeItems] = useState(false);
+
   const itemsPerPage = 3;
+
   const visibleArticles = dummy_articles.slice(
     currentStartIndex,
     currentStartIndex + itemsPerPage
